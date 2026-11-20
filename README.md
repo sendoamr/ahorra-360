@@ -169,3 +169,8 @@ La elección se guarda en el navegador para no volver a mostrar el aviso en cada
 Para cambiar el identificador en el futuro, solo tendrás que modificar `config/analytics.ts`.
 Antes de publicar, revisa también la política de privacidad y la configuración de cookies
 para que describan correctamente las herramientas y finalidades que utilices.
+
+
+## Gestor Excel del catálogo
+
+Consulta `CATALOGO-EXCEL.md`. Instala `requirements-catalog.txt`, ejecuta `python tools/catalog_manager.py export`, edita el Excel y vuelve a importarlo con `python tools/catalog_manager.py import --input catalogo-ahorra360.xlsx`. La importación valida y crea copia `.bak` antes de actualizar el JSON.
