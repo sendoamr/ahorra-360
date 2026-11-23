@@ -1,0 +1,1 @@
+export type ConnectorResult={sourceId:string;fetchedAt:string;records:unknown[];warnings:string[]};export interface SourceConnector{id:string;name:string;method:'API'|'RSS'|'OPEN_DATA'|'MANUAL_REVIEW';fetch():Promise<ConnectorResult>}

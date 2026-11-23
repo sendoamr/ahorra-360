@@ -1,0 +1,14 @@
+{
+  "last_successful_sync": "2026-11-23T15:51:50+00:00",
+  "last_report": {
+    "run_at": "2026-11-23T15:51:50+00:00",
+    "from": "2026-11-09",
+    "to": "2026-11-23",
+    "fetched": 2000,
+    "published_total": 299,
+    "added": 297,
+    "updated": 0,
+    "excluded": 1703,
+    "dry_run": false
+  }
+}

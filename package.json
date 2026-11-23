@@ -2,7 +2,34 @@
   "name": "ahorra360",
   "version": "2.0.0",
   "private": true,
-  "scripts": {"dev":"next dev","build":"next build","start":"next start","typecheck":"tsc --noEmit","check:data":"node scripts/validate-data.mjs"},
-  "dependencies": {"next":"^15.5.6","react":"^19.1.1","react-dom":"^19.1.1"},
-  "devDependencies": {"@types/node":"^22.15.30","@types/react":"^19.1.8","typescript":"^5.9.2"}
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "data:update": "python3 scripts/update_catalog.py",
+    "data:validate": "python3 scripts/update_catalog.py --dry-run --max-pages 1",
+    "data:update:full": "python3 scripts/update_catalog.py --full",
+    "data:update:dry": "python3 scripts/update_catalog.py --dry-run"
+  },
+  "dependencies": {
+    "lucide-react": "0.468.0",
+    "next": "15.1.3",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "zod": "3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "@types/react": "19.0.3",
+    "@types/react-dom": "19.0.2",
+    "autoprefixer": "10.4.20",
+    "postcss": "8.4.49",
+    "tailwindcss": "3.4.17",
+    "tsx": "4.19.2",
+    "typescript": "5.7.2",
+    "vitest": "2.1.8"
+  }
 }

@@ -1,0 +1,1 @@
+import type {SourceConnector} from './types';export const snpsapConnector:SourceConnector={id:'snpsap',name:'SNPSAP / BDNS',method:'API',async fetch(){if(!process.env.SNPSAP_API_BASE)throw new Error('SNPSAP_API_BASE no configurada');throw new Error('Conector deshabilitado hasta validar contrato y límites de la API oficial. No se generan datos sintéticos.')}};

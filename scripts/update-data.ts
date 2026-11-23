@@ -1,0 +1,1 @@
+import {execFileSync} from 'node:child_process';console.log('Ahorra360 data pipeline');execFileSync(process.execPath,['--import','tsx','scripts/validate-data.ts'],{stdio:'inherit'});console.log('Catálogo validado. Los conectores externos se ejecutan solo cuando están configurados y verificados.');

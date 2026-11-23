@@ -1,0 +1,3 @@
+import {NextRequest,NextResponse} from 'next/server';import {searchOpportunities} from '@/lib/opportunities';import {z} from 'zod';
+const schema=z.object({q:z.string().max(200).default(''),category:z.string().max(80).optional(),status:z.string().max(40).optional()});
+export function GET(req:NextRequest){const p=Object.fromEntries(req.nextUrl.searchParams.entries());const parsed=schema.safeParse(p);if(!parsed.success)return NextResponse.json({error:'Parámetros no válidos'},{status:400});return NextResponse.json({data:searchOpportunities(parsed.data.q,parsed.data.category,parsed.data.status)});}

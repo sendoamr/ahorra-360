@@ -1,27 +1,3 @@
-import type { Metadata } from 'next';
-import './globals.css';
-import AnalyticsConsent from '../components/AnalyticsConsent';
-
-export const metadata: Metadata = {
-  title: {
-    default: 'Ahorra360 | Ayudas, descuentos y oportunidades para ahorrar',
-    template: '%s | Ahorra360',
-  },
-  description: 'Encuentra ayudas públicas, beneficios fiscales, descuentos y oportunidades de ahorro para tu vivienda y tus gastos domésticos. Información contrastada con fuentes oficiales.',
-  openGraph: {
-    title: 'Ahorra360',
-    description: 'Ayudas, descuentos y oportunidades para ahorrar.',
-    type: 'website',
-  },
-};
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="es">
-      <body>
-        {children}
-        <AnalyticsConsent />
-      </body>
-    </html>
-  );
-}
+import type {Metadata} from 'next';import './globals.css';import {Header} from '@/components/Header';import {Footer} from '@/components/Footer';
+export const metadata:Metadata={metadataBase:new URL(process.env.NEXT_PUBLIC_SITE_URL||'http://localhost:3000'),title:{default:'Ahorra360 | Ayudas y ahorro para hogares',template:'%s | Ahorra360'},description:'Descubre ayudas públicas, optimiza facturas y encuentra oportunidades económicas verificadas.',openGraph:{title:'Ahorra360',description:'Inteligencia económica cotidiana',type:'website'}};
+export default function Layout({children}:{children:React.ReactNode}){return <html lang="es"><body><Header/><main>{children}</main><Footer/></body></html>}
